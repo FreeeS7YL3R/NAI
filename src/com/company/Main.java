@@ -120,11 +120,11 @@ public class Main {
         //endregion
         Scanner sc = new Scanner(System.in);
         ArrayList<Double> trainingDataList = new ArrayList<Double>();
-        double arg1, arg2, arg3, arg4;
+        double arg1 = 1, arg2 = 2, arg3 = 3, arg4 = 4;
         int k; //Amount of nearest flowers
 
 
-        //input data from user
+        /*//input data from user
         System.out.println("Enter 4 args ");
         arg1 = sc.nextDouble();
         arg2 = sc.nextDouble();
@@ -132,7 +132,7 @@ public class Main {
         arg4 = sc.nextDouble();
 
         System.out.println("Enter K: ");
-        k = sc.nextInt();
+        k = sc.nextInt();*/
 
         //distance calc
         //user{1, 2, 3, 4}
@@ -147,10 +147,13 @@ public class Main {
 
         double rezDistanceFunc = 0;
 
-        for (int i = 0; i <= trainingDataArr.length; i++)
 
-            rezDistanceFunc = calculateDistance(new double[]{5.1, 3.5, 1.4, 0.2}, new double[]{1, 2, 3, 4});
-        System.out.println("rezDistanceFunc = " + rezDistanceFunc);
+        for (int i = 0; i <= trainingDataArr[0].length; i++) {
+            rezDistanceFunc = calculateDistance(new double[]{trainingDataArr[i][0], trainingDataArr[i][1], trainingDataArr[i][2], trainingDataArr[i][3]},
+                    new double[]{arg1, arg2, arg3, arg4});
+            System.out.println("rezDistanceFunc = " + rezDistanceFunc);
+
+        }
 
     }
 
